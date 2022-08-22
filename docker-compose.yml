@@ -1,0 +1,14 @@
+---
+
+version: "2.3"
+
+services:
+  ldm:
+    container_name: ldm
+    build:
+      context: .
+    volumes:
+      - ./models:/app/models
+      - ./scripts:/app/scripts
+      - ./outputs:/app/outputs
+    tty: true
